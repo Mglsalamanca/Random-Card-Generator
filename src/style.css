@@ -23,9 +23,7 @@ span {
   text-align: left;
   transform: rotate(180deg);
 }
-.mid {
-  color: red;
-}
+
 .shadow {
   box-shadow: 1px 1px 3px #000;
   -moz-box-shadow: 1px 1px 3px #000;

@@ -39,6 +39,15 @@ window.onload = function() {
     const random = Math.floor(Math.random() * 51);
     const pintacarta = cards[random].pinta;
     const numerocarta = cards[random].numero;
+    if (pintacarta == "Diamonds" || pintacarta == "Hearts") {
+      document.getElementById("mid").style.color = "red";
+      document.getElementById("top").style.color = "red";
+      document.getElementById("bottom").style.color = "red";
+    } else if (pintacarta == "Spades" || pintacarta == "Clubs") {
+      document.getElementById("mid").style.color = "black";
+      document.getElementById("top").style.color = "black";
+      document.getElementById("bottom").style.color = "black";
+    }
 
     let figura = document.querySelectorAll(".figura");
     figura.forEach(item => {
@@ -48,6 +57,7 @@ window.onload = function() {
         item.innerHTML = "&" + pintacarta.toLowerCase() + ";";
       }
     });
+
     console.log(figura);
 
     let numero = document.querySelectorAll(".numero");
